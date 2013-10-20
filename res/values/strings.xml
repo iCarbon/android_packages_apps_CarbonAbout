@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 Carbon Development
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">About Carbon</string>
+    <string name="about_title">Welcome to </string>
+    <string name="features_title">Carbon Features</string>
+    <string name="maintainers_title">Maintainers</string>
+    <string name="maintainers_version_text">listed in no particular order</string>
+    <string name="finish_button_text">Finish</string>
+    <string name="back_button_text">Back</string>
+    <string name="next_button_text">Next</string>
+    <string name="menu_exit">Exit</string>
+
+    <string name="carbon_devs">Developers</string>
+    <string name="carbon_maintainers">Maintainers</string>
+
+    <string name="carbon_devs_summary">Carbon Developers</string>
+    <string name="carbon_maintainers_summary">Carbon Maintainers</string>
+
+    <!-- Tabs -->
+    <string name="about_tab_title">About</string>
+    <string name="features_tab_title">Features</string>
+    <string name="maintainers_tab_title">Maintainers</string>
+    <string name="contributors_tab_title">Contributors</string>
+    <string name="social_tab_title">Social</string>
+    <string name="carbon_tab_title">Team Carbon</string>
+
+    <!-- Carbon Team -->
+    <string name="carbon_title">Carbon Team</string>
+    <string name="carbon_version_text">DEVS IN REAL TIME</string>
+
+    <!-- Drawer dependency -->
+    <string-array name="drawer_names">
+        <item>About Carbon</item>
+        <item>Changelog</item>
+    </string-array>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- Layout dev_card strings -->
+    <string name="github">Github</string>
+    <string name="donate">Donate</string>
+    <string name="twitter">Twitter</string>
+    <string name="email">Email</string>
+
+    <!-- Linking back profile picture in Google+ -->
+        <!-- CORE -->
+    <string name="linkb_andros">https://lh3.googleusercontent.com/-nxqszU1jekc/UkewTlalK_I/AAAAAAAAALE/n-fppZsYNMk/w298-h297-no/1237017_10151651817722043_314045569_n.jpg</string>
+    <string name="linkb_ahmed">https://lh6.googleusercontent.com/-NONqP20EsV8/UVqIIzeK50I/AAAAAAAACcM/BUjGumKG9_8/s309-no/310986_2317950626300_1175544308_2150645_660226806_n.jpg</string>
+    <string name="linkb_daxx">https://lh4.googleusercontent.com/-I4bW_4yBI2c/UmAyKT7BB5I/AAAAAAAAGNA/9Dp7zfUH2UA/s256-no/988f44ac-5706-4ebd-a906-6c148991017b</string>
+    <string name="linkb_derek">https://lh3.googleusercontent.com/-F-hAPje6WpM/ThUTEZoUu4I/AAAAAAAADm0/okgfS7wlhdU/s358-no/11+-+6</string>
+    <string name="linkb_matt">https://lh5.googleusercontent.com/-qEwK2SBxK8o/Th9L165yZpI/AAAAAAAAAKY/5isvriEguhw/w303-h302-no/mattman.png</string>
+    <string name="linkb_ricky">https://lh3.googleusercontent.com/-tk8maFZvMZ0/Ua7aaKXsdmI/AAAAAAAABjM/uYGgo3G9nuc/s420-no/416dc916ac9aac7527d7b58796fd455c.jpeg</string>
+    <string name="linkb_tom">https://lh5.googleusercontent.com/-nC69ReSzXFo/UHlGoSgpsFI/AAAAAAAABEU/Qg49E1mgy_w/s256-no/95d596ee-547c-4874-b8c8-84995d644880</string>
+    <string name="linkb_tylar">https://lh6.googleusercontent.com/-6vWcrqDfnII/Ugs2-8aQBnI/AAAAAAAAA6A/3iQEDoqsv6A/s319-no/8435_143378488710_1352976_n.jpg</string>
+        <!-- MAINTAINERS -->
+    <string name="linkb_robert">https://lh5.googleusercontent.com/-biJaav-52Ho/UjqY0rg3BLI/AAAAAAAASUE/IFlFFSU_7jY/s256-no/0057114e-2751-4e87-8318-21a308dec584</string>
+
+</resources>
