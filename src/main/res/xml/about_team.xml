@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:carbon="http://schemas.android.com/apk/res/com.carbon.about">
+
+        <com.carbon.about.widget.DeveloperPreference
+            android:title="Daniel MM"
+            carbon:nameDev="daxxmax"
+            carbon:twitterHandle="daxxmax"
+            carbon:githubLink="http://github.com/daxxmax"
+            carbon:emailDev="daxx4182@gmail.com"/>
+
+</PreferenceScreen>
