@@ -8,11 +8,16 @@ import android.net.Uri;
 import android.preference.Preference;
 import android.util.AttributeSet;
 import android.view.Display;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
+import android.widget.PopupMenu.OnMenuItemClickListener;
 import android.widget.TextView;
 
 import com.carbon.about.R;
@@ -21,7 +26,7 @@ import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class DeveloperPreference extends Preference {
+public class DeveloperPreference extends Preference implements OnClickListener, OnMenuItemClickListener {
     private static final String TAG = "DeveloperPreference";
     public static final String GRAVATAR_API = "http://www.gravatar.com/avatar/";
     public static int mDefaultAvatarSize = 400;
@@ -29,6 +34,7 @@ public class DeveloperPreference extends Preference {
     private ImageView donateButton;
     private ImageView githubButton;
     private ImageView photoView;
+    private PopupMenu popupMenu;
 
     private TextView devName;
 
@@ -38,6 +44,10 @@ public class DeveloperPreference extends Preference {
     private String githubLink;
     private String devEmail;
     private final Display mDisplay;
+
+    private static final int MENU_GOOGLE = 0;
+    private static final int MENU_GITHUB = 1;
+    private static final int MENU_TWITTER = 2;
 
     public DeveloperPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -68,38 +78,23 @@ public class DeveloperPreference extends Preference {
         //githubButton = (ImageView) layout.findViewById(R.id.github_button);
         devName = (TextView) layout.findViewById(R.id.name);
         photoView = (ImageView) layout.findViewById(R.id.photo);
+        popupMenu = new PopupMenu(getContext(), layout.findViewById(R.id.anchor));
+        layout.findViewById(R.id.anchor).setOnClickListener(this);
         return layout;
     }
 
     @Override
     protected void onBindView(View view) {
         super.onBindView(view);
+        popupMenu.setOnMenuItemClickListener(this);
         if (donateLink != null) {
-            final OnClickListener openDonate = new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Uri donateURL = Uri.parse(donateLink);
-                    final Intent intent = new Intent(Intent.ACTION_VIEW, donateURL);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    getContext().startActivity(intent);
-                }
-            };
-            donateButton.setOnClickListener(openDonate);
+            popupMenu.getMenu().add(Menu.NONE, MENU_GOOGLE, Menu.NONE, "Item 1");
         } else {
             donateButton.setVisibility(View.GONE);
         }
 
         if (githubLink != null) {
-            final OnClickListener openGithub = new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Uri githubURL = Uri.parse(githubLink);
-                    final Intent intent = new Intent(Intent.ACTION_VIEW, githubURL);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    getContext().startActivity(intent);
-                }
-            };
-            githubButton.setOnClickListener(openGithub);
+            popupMenu.getMenu().add(Menu.NONE, MENU_GITHUB, Menu.NONE, "Item 2");
         } else {
             githubButton.setVisibility(View.GONE);
         }
@@ -129,6 +124,31 @@ public class DeveloperPreference extends Preference {
         }
         devName.setText(nameDev);
     }
+
+    @Override
+    public void onClick(View v) {
+        popupMenu.show();
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        switch (item.getItemId()) {
+            case MENU_GOOGLE:
+                Uri donateURL = Uri.parse(donateLink);
+                final Intent donintent = new Intent(Intent.ACTION_VIEW, donateURL);
+                donintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                getContext().startActivity(donintent);
+                break;
+            case MENU_GITHUB:
+                Uri githubURL = Uri.parse(githubLink);
+                final Intent ghintent = new Intent(Intent.ACTION_VIEW, githubURL);
+                ghintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                getContext().startActivity(ghintent);
+                break;
+        }
+        return false;
+    }
+
 
     public String getGravatarUrl(String email) {
         try {
