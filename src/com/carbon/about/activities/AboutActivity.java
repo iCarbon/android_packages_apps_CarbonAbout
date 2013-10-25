@@ -68,7 +68,7 @@ public class AboutActivity extends FragmentActivity {
 
         public TabsAdapter(FragmentManager fm) {
             super(fm);
-            frags[0] = new AboutFragment();
+            frags[0] = new AboutFragments();
             frags[1] = new AboutDevelopers();
             frags[2] = new AboutMaintainers();
         }

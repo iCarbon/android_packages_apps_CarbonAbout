@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2012 Crossbones Software
- * This code has been modified.  Portions copyright (C) 2013, Dirty Unicorns Project.
+ * This code has been modified.  Portions copyright (C) 2013, Carbon Development
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,20 +15,25 @@
  * limitations under the License.
  */
 
-package com.carbon.about;
+package com.carbon.about.fragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.carbon.about.activities.AboutActivity;
+import com.carbon.about.R;
+import com.carbon.about.Utils;
 
-public class AboutFragment extends Fragment {
+public class AboutFragments extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                Bundle savedInstanceState) {
 
         View aboutView = inflater.inflate(R.layout.about_fragment, container, false);
 
