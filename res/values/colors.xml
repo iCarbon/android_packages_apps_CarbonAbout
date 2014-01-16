@@ -3,5 +3,6 @@
 
     <color name="card_pressed">#7E0099CC</color>
     <color name="card_gray">#DEDEDE</color>
+    <color name="card_unpressed">#1F1F1F</color>
 
 </resources>

@@ -31,9 +31,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textAppearance="@style/TextAppearance.PagerTabs"
-                android:background="@android:color/white" />
+                android:background="@color/card_unpressed" />
 
     </android.support.v4.view.ViewPager>
 </LinearLayout>

@@ -36,7 +36,6 @@
             android:layout_width="match_parent"
             android:layout_height="240dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/carbon_logo"
             android:layout_marginBottom="5dp"
             android:paddingLeft="3dip"
             android:paddingRight="3dip" />
@@ -56,21 +55,11 @@
                 android:singleLine="true"
                 android:ellipsize="end"
                 android:gravity="center_horizontal"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:layout_marginLeft="15dp"
                 android:textAppearance="@style/TextAppearance.Name"
                 android:layout_below="@+id/photo"
                 android:layout_centerHorizontal="true" />
-
-            <ImageView
-                android:id="@+id/gplus_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/photo"
-                android:layout_toRightOf="@+id/name"
-                android:src="@drawable/gplus_red"
-                android:layout_marginLeft="10dp"
-                android:scaleType="centerInside" />
 
         </LinearLayout>
 
@@ -93,7 +82,7 @@
             android:singleLine="true"
             android:ellipsize="end"
             android:gravity="center_horizontal"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:layout_marginLeft="15dp"
             android:layout_marginBottom="4dp"
             android:textAppearance="@style/TextAppearance.Status"

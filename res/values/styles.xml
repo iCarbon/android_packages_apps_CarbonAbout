@@ -7,7 +7,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="TextAppearance.Name" parent="@android:style/TextAppearance.DeviceDefault.Large">
+    <style name="TextAppearance.Name" parent="@android:style/TextAppearance.DeviceDefault.Medium">
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:textStyle">italic</item>
     </style>

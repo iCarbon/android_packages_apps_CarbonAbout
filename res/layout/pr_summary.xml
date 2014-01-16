@@ -24,6 +24,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textAppearance="@style/TextAppearance.Summary"
-            android:text="@string/carbon_devs_summary"
+            android:text="@string/carbon_pr_summary"
             android:background="@drawable/card_selector" />
 </LinearLayout>

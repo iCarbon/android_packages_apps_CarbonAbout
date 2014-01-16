@@ -34,7 +34,7 @@ import java.util.Collections;
 
 import com.carbon.about.R;
 
-public class AboutDevelopers extends PreferenceFragment {
+public class AboutCoreMembers extends PreferenceFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,7 +51,7 @@ public class AboutDevelopers extends PreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.about_developers);
+        addPreferencesFromResource(R.xml.about_core);
     }
 
     @Override

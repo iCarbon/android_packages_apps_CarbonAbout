@@ -69,7 +69,7 @@ public class AboutActivity extends FragmentActivity {
         public TabsAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new AboutFragments();
-            frags[1] = new AboutDevelopers();
+            frags[1] = new AboutCoreMembers();
             frags[2] = new AboutMaintainers();
         }
 
@@ -92,7 +92,7 @@ public class AboutActivity extends FragmentActivity {
     private String[] getTitles() {
         titleString = new String[]{
                 getString(R.string.about_title),
-                getString(R.string.carbon_devs),
+                getString(R.string.carbon_main_members),
                 getString(R.string.carbon_maintainers)};
         return titleString;
     }

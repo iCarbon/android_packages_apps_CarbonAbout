@@ -27,15 +27,17 @@
     <!-- Tabs -->
     <string name="about_title">About</string>
     <string name="features_title">Features</string>
-    <string name="carbon_devs">Contributors</string>
+    <string name="carbon_main_members">The Team</string>
     <string name="carbon_maintainers">Maintainers</string>
 
-    <string name="carbon_devs_summary">Contributors of Carbon</string>
-    <string name="carbon_maintainers_summary">Maintainers of Carbon</string>
+    <string name="carbon_core_summary">Core Members</string>
+    <string name="carbon_designers_summary">Carbon Designers</string>
+    <string name="carbon_maintainers_summary">Carbon Maintainers</string>
+    <string name="carbon_pr_summary">Carbon Public Relations</string>
 
     <!-- Carbon Team -->
     <string name="carbon_title">Carbon Team</string>
-    <string name="carbon_version_text">DEVS IN REAL TIME</string>
+    <string name="carbon_version_text"></string>
 
     <!-- Drawer dependency -->
     <string-array name="drawer_names">
@@ -46,28 +48,16 @@
     <string name="drawer_close">Close navigation drawer</string>
 
     <!-- Layout dev_card strings -->
-    <string name="github">Github</string>
     <string name="donate">Donate</string>
-    <string name="twitter">Twitter</string>
     <string name="email">Email</string>
+    <string name="googleplus">Google+</string>
+    <string name="github">Github</string>
+    <string name="twitter">Twitter</string>
 
     <string name="status_dev">Developer</string>
+    <string name="status_designers">Designer</string>
     <string name="status_pr">Public Relations &amp; Social Media</string>
     <string name="status_gerrit">Gerrit Maintainer</string>
     <string name="status_head_dev">Head Developer</string>
     <string name="status_dev_and_co_founder">Developer / Co-Founder</string>
-
-    <!-- Linking back profile picture in Google+ -->
-        <!-- CORE -->
-    <string name="linkb_andros">https://lh3.googleusercontent.com/-nxqszU1jekc/UkewTlalK_I/AAAAAAAAALE/n-fppZsYNMk/w298-h297-no/1237017_10151651817722043_314045569_n.jpg</string>
-    <string name="linkb_ahmed">https://lh6.googleusercontent.com/-NONqP20EsV8/UVqIIzeK50I/AAAAAAAACcM/BUjGumKG9_8/s309-no/310986_2317950626300_1175544308_2150645_660226806_n.jpg</string>
-    <string name="linkb_daxx">https://lh4.googleusercontent.com/-I4bW_4yBI2c/UmAyKT7BB5I/AAAAAAAAGNA/9Dp7zfUH2UA/s256-no/988f44ac-5706-4ebd-a906-6c148991017b</string>
-    <string name="linkb_derek">https://lh3.googleusercontent.com/-F-hAPje6WpM/ThUTEZoUu4I/AAAAAAAADm0/okgfS7wlhdU/s358-no/11+-+6</string>
-    <string name="linkb_matt">https://lh5.googleusercontent.com/-qEwK2SBxK8o/Th9L165yZpI/AAAAAAAAAKY/5isvriEguhw/w303-h302-no/mattman.png</string>
-    <string name="linkb_ricky">https://lh3.googleusercontent.com/-tk8maFZvMZ0/Ua7aaKXsdmI/AAAAAAAABjM/uYGgo3G9nuc/s420-no/416dc916ac9aac7527d7b58796fd455c.jpeg</string>
-    <string name="linkb_tom">https://lh5.googleusercontent.com/-nC69ReSzXFo/UHlGoSgpsFI/AAAAAAAABEU/Qg49E1mgy_w/s256-no/95d596ee-547c-4874-b8c8-84995d644880</string>
-    <string name="linkb_tylar">https://lh6.googleusercontent.com/-6vWcrqDfnII/Ugs2-8aQBnI/AAAAAAAAA6A/3iQEDoqsv6A/s319-no/8435_143378488710_1352976_n.jpg</string>
-        <!-- MAINTAINERS -->
-    <string name="linkb_robert">https://lh5.googleusercontent.com/-biJaav-52Ho/UjqY0rg3BLI/AAAAAAAASUE/IFlFFSU_7jY/s256-no/0057114e-2751-4e87-8318-21a308dec584</string>
-
 </resources>

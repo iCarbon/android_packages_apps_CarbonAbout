@@ -21,7 +21,6 @@
         <com.carbon.about.widget.DeveloperPreference
             carbon:nameDev="Robert Rascon"
             carbon:statusDev="Device: Samsung Galaxy S3 Variant (d2)"
-            carbon:devUrl="@string/linkb_robert"
             carbon:googleHandle="101779483513094545241"
             carbon:githubLink="http://github.com/bigshotrob22"
             carbon:emailDev="rrascon22@gmail.com"
