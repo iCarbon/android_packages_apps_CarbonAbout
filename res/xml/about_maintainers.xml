@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:carbon="http://schemas.android.com/apk/res/com.carbon.about">
+
+       <PreferenceScreen
+           android:key="maintainers_summary"
+           android:layout="@layout/maintainers_summary" />
+
+        <!-- How to add yourself
+         *  your name > carbon:nameDev
+         *  what device you're maintaining > carbon:statusDev
+         *  your google profile picture > carbon:devUrl
+         *  your google profile id > carbon:googleHandle
+         *  your github > carbon:githubLink
+         *  your email > carbon:emailDev
+         *  your twitter > carbon:twitterLink
+         **   simple as one two and three
+        -->
+
+        <com.carbon.about.widget.DeveloperPreference
+            carbon:nameDev="Robert Rascon"
+            carbon:statusDev="Device: Samsung Galaxy S3 Variant (d2)"
+            carbon:devUrl="@string/linkb_robert"
+            carbon:googleHandle="101779483513094545241"
+            carbon:githubLink="http://github.com/bigshotrob22"
+            carbon:emailDev="rrascon22@gmail.com"
+            carbon:twitterLink="bigshotrob22" />
+
+</PreferenceScreen>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:carbon="http://schemas.android.com/apk/res/com.carbon.about">
+
+       <PreferenceScreen
+           android:key="dev_summary"
+           android:layout="@layout/devs_summary" />
+
+        <com.carbon.about.widget.DeveloperPreference
+            carbon:nameDev="Ahmed Khalil"
+            carbon:statusDev="@string/status_pr"
+            carbon:devUrl="@string/linkb_ahmed"
+            carbon:googleHandle="112969077631740414020" />
+
+        <com.carbon.about.widget.DeveloperPreference
+            carbon:nameDev="Andros Rosa"
+            carbon:statusDev="@string/status_dev"
+            carbon:devUrl="@string/linkb_andros"
+            carbon:googleHandle="111721285589066146000"
+            carbon:githubLink="http://github.com/andros11"
+            carbon:emailDev="andros2011@gmail.com" />
+
+        <com.carbon.about.widget.DeveloperPreference
+            carbon:nameDev="Daniel MM"
+            carbon:statusDev="@string/status_dev"
+            carbon:devUrl="@string/linkb_daxx"
+            carbon:googleHandle="115569516936113574583"
+            carbon:githubLink="http://github.com/daxxmax"
+            carbon:emailDev="daxx4182@gmail.com"
+            carbon:twitterLink="daxxmax" />
+
+        <com.carbon.about.widget.DeveloperPreference
+            carbon:nameDev="Derek Gelinas"
+            carbon:statusDev="@string/status_dev_and_co_founder"
+            carbon:devUrl="@string/linkb_derek"
+            carbon:googleHandle="114660037306973840401"
+            carbon:githubLink="http://github.com/dg4prez"
+            carbon:emailDev="mrdgelinas@gmail.com" />
+
+        <com.carbon.about.widget.DeveloperPreference
+            carbon:nameDev="Matt Bloomfield"
+            carbon:statusDev="@string/status_dev"
+            carbon:devUrl="@string/linkb_matt"
+            carbon:googleHandle="115194825327804536850"
+            carbon:githubLink="http://github.com/mattmanwrx"
+            carbon:emailDev="webmaster@mattman.org" />
+
+        <com.carbon.about.widget.DeveloperPreference
+            carbon:nameDev="Ricky Salinas"
+            carbon:statusDev="@string/status_dev"
+            carbon:devUrl="@string/linkb_ricky"
+            carbon:googleHandle="104728329553291412498"
+            carbon:githubLink="http://github.com/slickrick"
+            carbon:emailDev="rsalinas1@mail.usf.edu" />
+
+        <com.carbon.about.widget.DeveloperPreference
+            carbon:nameDev="Tom Dulin"
+            carbon:statusDev="@string/status_dev_and_co_founder"
+            carbon:devUrl="@string/linkb_tom"
+            carbon:googleHandle="105296412157353903888"
+            carbon:githubLink="http://github.com/nocoast"
+            carbon:twitterLink="n0coast" />
+
+        <com.carbon.about.widget.DeveloperPreference
+            carbon:nameDev="Tylar Overturf"
+            carbon:statusDev="@string/status_head_dev"
+            carbon:devUrl="@string/linkb_tylar"
+            carbon:googleHandle="106513914946845471488"
+            carbon:githubLink="http://github.com/winner00"
+            carbon:emailDev="toverturf@gmail.com"
+            carbon:twitterLink="expertontech" />
+
+</PreferenceScreen>
