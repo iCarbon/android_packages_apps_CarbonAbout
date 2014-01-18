@@ -83,7 +83,7 @@
             android:ellipsize="end"
             android:gravity="center_horizontal"
             android:textColor="@android:color/white"
-            android:layout_marginLeft="14dp"
+            android:layout_marginLeft="15dp"
             android:paddingBottom="4dp"
             android:textAppearance="@style/TextAppearance.Status"
             android:layout_below="@+id/twitter_name"

@@ -16,6 +16,7 @@
 
 package com.carbon.about.activities;
 
+import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
@@ -24,6 +25,9 @@ import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.carbon.about.R;
 import com.carbon.about.fragments.*;
@@ -50,6 +54,10 @@ public class AboutActivity extends FragmentActivity {
 
         TabsAdapter TabsAdapter = new TabsAdapter(getFragmentManager());
         mViewPager.setAdapter(TabsAdapter);
+
+        ActionBar ab = getActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setHomeButtonEnabled(true);
     }
 
     @Override
@@ -60,6 +68,17 @@ public class AboutActivity extends FragmentActivity {
     @Override
     public void onPause() {
         super.onPause();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
     }
 
     class TabsAdapter extends FragmentPagerAdapter {

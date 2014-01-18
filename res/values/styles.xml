@@ -8,13 +8,11 @@
     </style>
 
     <style name="TextAppearance.Name" parent="@android:style/TextAppearance.DeviceDefault.Medium">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textStyle">italic</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
     </style>
 
     <style name="TextAppearance.Status" parent="@android:style/TextAppearance.DeviceDefault.Small">
         <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textStyle">italic</item>
     </style>
 
     <style name="TextAppearance.Summary" parent="@android:style/TextAppearance.DeviceDefault.Medium">

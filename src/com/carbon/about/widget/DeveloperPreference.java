@@ -145,6 +145,11 @@ public class DeveloperPreference extends Preference implements OnMenuItemClickLi
         if (twitterLink != null) {
             popupMenu.getMenu().add(Menu.NONE, MENU_TWITTER, 0, R.string.twitter);
         }
+        if (donateLink == null &&
+                emailDev == null && googleHandle == null
+                && githubLink == null && twitterLink == null) {
+            popupMenuButton.setVisibility(View.INVISIBLE);
+        }
 
         popupMenu.setOnMenuItemClickListener(this);
 
