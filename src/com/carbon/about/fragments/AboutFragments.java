@@ -41,8 +41,8 @@ public class AboutFragments extends Fragment {
         String version =  Utils.getCarbonVersion();
         aboutTitle.append(" Carbon ");
 
-        TextView aboutText = (TextView) aboutView.findViewById(R.id.about);
-        aboutText.setText(Utils.readRawFile(AboutActivity.appContext, R.raw.about_carbon));
+        //TextView aboutText = (TextView) aboutView.findViewById(R.id.about);
+        //aboutText.setText(Utils.readRawFile(AboutActivity.appContext, R.raw.about_carbon));
 
         // Inflate the layout for this fragment
         return aboutView;

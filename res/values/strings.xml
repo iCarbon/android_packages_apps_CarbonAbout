@@ -29,6 +29,7 @@
     <string name="features_title">Features</string>
     <string name="carbon_main_members">The Team</string>
     <string name="carbon_maintainers">Maintainers</string>
+    <string name="carbon_team">Team Meetup</string>
 
     <string name="carbon_core_summary">Core Members</string>
     <string name="carbon_designers_summary">Carbon Designers</string>
@@ -40,12 +41,9 @@
     <string name="carbon_version_text"></string>
 
     <!-- Drawer dependency -->
-    <string-array name="drawer_names">
-        <item>About Carbon</item>
-        <item>Changelog</item>
-    </string-array>
-    <string name="drawer_open">Open navigation drawer</string>
-    <string name="drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_toggle">Toggle Drawer</string>
 
     <!-- Layout dev_card strings -->
     <string name="donate">Donate</string>

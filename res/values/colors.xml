@@ -5,4 +5,7 @@
     <color name="card_gray">#DEDEDE</color>
     <color name="card_unpressed">#1F1F1F</color>
 
+    <color name="carbon_grey">#ff1d1d1d</color>
+    <color name="carbon_grey2">#ff181818</color>
+
 </resources>
