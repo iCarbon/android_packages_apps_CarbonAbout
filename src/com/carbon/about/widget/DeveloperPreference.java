@@ -176,7 +176,7 @@ public class DeveloperPreference extends Preference implements OnMenuItemClickLi
                 getContext().startActivity(emaintent);
                 break;
             case MENU_GOOGLEPLUS:
-                Uri gplusURL = Uri.parse("https://plus.google.com/u/0/" + googleHandle);
+                Uri gplusURL = Uri.parse("https://plus.google.com/u/0/" + googleHandle + "/about");
                 final Intent gpintent = new Intent(Intent.ACTION_VIEW, gplusURL);
                 gpintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 getContext().startActivity(gpintent);
