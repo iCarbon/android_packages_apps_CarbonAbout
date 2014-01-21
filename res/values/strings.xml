@@ -56,6 +56,6 @@
     <string name="status_designers">Designer</string>
     <string name="status_pr">Public Relations &amp; Social Media</string>
     <string name="status_gerrit">Gerrit Maintainer</string>
-    <string name="status_head_dev">Head Developer</string>
+    <string name="status_core_dev">Core Developer</string>
     <string name="status_dev_and_co_founder">Developer / Co-Founder</string>
 </resources>

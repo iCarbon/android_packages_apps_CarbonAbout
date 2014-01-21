@@ -51,8 +51,8 @@
             carbon:emailDev="rsalinas1@mail.usf.edu" />
 
         <com.carbon.about.widget.DeveloperPreference
-            carbon:nameDev="Tyler Overturf"
-            carbon:statusDev="@string/status_head_dev"
+            carbon:nameDev="Tylar Overturf"
+            carbon:statusDev="@string/status_core_dev"
             carbon:googleHandle="106513914946845471488"
             carbon:githubLink="http://github.com/winner00"
             carbon:emailDev="toverturf@gmail.com"
