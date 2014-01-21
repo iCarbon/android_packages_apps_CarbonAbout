@@ -76,7 +76,7 @@ public class AboutActivity extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //appContext = getApplicationContext();
+        appContext = getActivity().getApplicationContext();
 
         ActionBar ab = getActionBar();
         ab.setDisplayHomeAsUpEnabled(true);

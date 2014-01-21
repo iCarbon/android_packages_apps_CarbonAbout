@@ -10,8 +10,7 @@
         <!-- How to add yourself
          *  your name > carbon:nameDev
          *  what device you're maintaining > carbon:statusDev
-         *  your google profile picture > carbon:devUrl
-         *  your google profile id > carbon:googleHandle
+         *  your google profile id (not custom url) and picture > carbon:googleHandle
          *  your github > carbon:githubLink
          *  your email > carbon:emailDev
          *  your twitter > carbon:twitterLink
