@@ -9,7 +9,7 @@
 
         <com.carbon.about.widget.DeveloperPreference
             carbon:nameDev="Andros Rosa"
-            carbon:statusDev="@string/status_dev"
+            carbon:statusDev="@string/status_core_dev"
             carbon:googleHandle="111721285589066146000"
             carbon:githubLink="http://github.com/andros11"
             carbon:emailDev="andros2011@gmail.com" />
