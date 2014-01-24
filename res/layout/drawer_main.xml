@@ -31,7 +31,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/dw_navigation_drawer"
         android:background="@color/carbon_grey"
-        android:layout_width="260dp"
+        android:layout_width="270dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:choiceMode="singleChoice"

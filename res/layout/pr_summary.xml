@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textAppearance="@style/TextAppearance.Summary"
+            android:textAppearance="@style/summary_text_style"
             android:text="@string/carbon_pr_summary"
             android:background="@drawable/card_selector" />
 </LinearLayout>

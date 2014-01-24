@@ -44,6 +44,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_toggle">Toggle Drawer</string>
+    <string name="toggle_back_cfibers">Back to Carbon Fibers</string>
 
     <!-- Layout dev_card strings -->
     <string name="donate">Donate</string>

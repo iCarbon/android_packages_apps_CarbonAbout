@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="TextAppearance.PagerTabs" parent="@android:style/TextAppearance.DeviceDefault.Small">
-        <item name="android:fontFamily">sans-serif-condensed</item>
-        <item name="android:textAllCaps">true</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="TextAppearance.Name" parent="@android:style/TextAppearance.DeviceDefault.Medium">
-        <item name="android:fontFamily">sans-serif-condensed</item>
-    </style>
-
-    <style name="TextAppearance.Status" parent="@android:style/TextAppearance.DeviceDefault.Small">
+    <style name="nav_drawer_text_style">
         <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/carbon_div</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">19sp</item>
     </style>
 
-    <style name="TextAppearance.Summary" parent="@android:style/TextAppearance.DeviceDefault.Medium">
+    <style name="dev_name_text_style">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="status_text_style">
         <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="summary_text_style" parent="@android:style/TextAppearance.DeviceDefault.Medium">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAllCaps">true</item>
     </style>
 

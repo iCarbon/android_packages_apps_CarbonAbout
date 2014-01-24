@@ -17,6 +17,7 @@
 package com.carbon.about.activities;
 
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -31,6 +32,7 @@ import android.preference.PreferenceFrameLayout;
 import android.preference.PreferenceManager;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
@@ -49,7 +51,7 @@ import com.carbon.about.R;
 import com.carbon.about.fragments.*;
 import com.carbon.about.widget.CustomDrawerLayout;
 
-public class AboutActivity extends Fragment {
+public class AboutActivity extends FragmentActivity {
 
     public static Context appContext;
 
@@ -68,7 +70,7 @@ public class AboutActivity extends Fragment {
     private static int DRAWER_MODE = 0;
     private SharedPreferences mPreferences;
 
-    private static final int MENU_DRAWER = Menu.FIRST;
+    private static final int MENU_BACK = Menu.FIRST;
 
     String titleString[];
 
@@ -76,26 +78,11 @@ public class AboutActivity extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        appContext = getActivity().getApplicationContext();
+        appContext = getApplicationContext();
 
-        ActionBar ab = getActionBar();
-        ab.setDisplayHomeAsUpEnabled(true);
-        ab.setHomeButtonEnabled(true);
+        setContentView(R.layout.drawer_main);
 
-        if (savedInstanceState != null) {
-            mCurrentSelectedPosition = savedInstanceState.getInt(STATE_SELECTED_POSITION);
-            mFromSavedInstanceState = true;
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        ViewGroup rootView;
-
-        rootView = (ViewGroup) inflater.inflate(R.layout.drawer_main, container, false);
-
-        mDrawerListView = (ListView) rootView.findViewById(R.id.dw_navigation_drawer);
+        mDrawerListView = (ListView) findViewById(R.id.dw_navigation_drawer);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -105,26 +92,23 @@ public class AboutActivity extends Fragment {
 
         mDrawerListView.setAdapter(new ArrayAdapter<String>(
                 getActionBar().getThemedContext(),
-                android.R.layout.simple_list_item_1,
+                R.layout.drawer_list,
                 android.R.id.text1,
                 getTitles()));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
 
         setUpNavigationDrawer(
-                rootView.findViewById(R.id.dw_navigation_drawer),
-                (CustomDrawerLayout) rootView.findViewById(R.id.dw_drawer_layout));
+                findViewById(R.id.dw_navigation_drawer),
+                (CustomDrawerLayout) findViewById(R.id.dw_drawer_layout));
 
-        if (container instanceof PreferenceFrameLayout) {
-            ((PreferenceFrameLayout.LayoutParams) rootView.getLayoutParams()).removeBorders = true;
+        ActionBar ab = getActionBar();
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setHomeButtonEnabled(true);
+
+        if (savedInstanceState != null) {
+            mCurrentSelectedPosition = savedInstanceState.getInt(STATE_SELECTED_POSITION);
+            mFromSavedInstanceState = true;
         }
-
-        return rootView;
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        // setHasOptionsMenu(true);
     }
 
     @Override
@@ -150,27 +134,26 @@ public class AboutActivity extends Fragment {
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        menu.add(0, MENU_DRAWER, 0, R.string.navigation_drawer_toggle)
-                .setIcon(R.drawable.ic_drawer)
-                .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add(0, MENU_BACK, 0, R.string.toggle_back_cfibers)
+                .setIcon(R.drawable.ic_back)
+                .setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
         restoreActionBar();
+        return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+
         switch (item.getItemId()) {
-            case android.R.id.home:
+            case MENU_BACK:
                 Intent homeIntent = new Intent();
                 homeIntent.setClassName("com.carbon.fibers", "com.carbon.fibers.SettingsActivity");
                 homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(homeIntent);
-                return true;
-            case MENU_DRAWER:
-                if (isDrawerOpen())
-                    mDrawerLayout.closeDrawer(mFragmentContainerView);
-                else
-                    mDrawerLayout.openDrawer(mFragmentContainerView);
                 return true;
             default:
                 return super.onContextItemSelected(item);
@@ -195,7 +178,7 @@ public class AboutActivity extends Fragment {
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
         mDrawerToggle = new ActionBarDrawerToggle(
-                getActivity(),
+                this,
                 mDrawerLayout,
                 R.drawable.ic_drawer,
                 R.string.navigation_drawer_open,
@@ -204,26 +187,19 @@ public class AboutActivity extends Fragment {
             @Override
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
-                if (!isAdded()) {
-                    return;
-                }
 
-                getActivity().invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
+                invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
             }
 
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                if (!isAdded()) {
-                    return;
-                }
 
-                getActivity().invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
+                invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
             }
         };
 
-        // Remove or set it to true, if you want to use home to toggle the menu_drawer
-        mDrawerToggle.setDrawerIndicatorEnabled(false);
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
 
         if (!mFromSavedInstanceState) {
             mDrawerLayout.openDrawer(mFragmentContainerView);
@@ -251,12 +227,8 @@ public class AboutActivity extends Fragment {
     public void restoreActionBar() {
         ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-        actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.setTitle(getActivity().getTitle());
-    }
-
-    private ActionBar getActionBar() {
-        return getActivity().getActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setTitle(getTitle());
     }
 
     private void selectItem(int position) {

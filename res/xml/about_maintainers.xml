@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:carbon="http://schemas.android.com/apk/res/com.carbon.fibers">
+    xmlns:carbon="http://schemas.android.com/apk/res/com.carbon.about">
 
        <PreferenceScreen
            android:key="maintainers_summary"
